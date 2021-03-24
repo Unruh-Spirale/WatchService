@@ -1,0 +1,55 @@
+<app-header>
+  <p levels>watches service</p>
+  <div content>
+    <p>List of watches in service</p>
+  </div>
+</app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table *ngIf="watches && watches.length >0; else noWatchesInfo" class="table table-striped">
+        <thead>
+        <tr class="text-uppercase">
+          <th>comapny</th>
+          <th>model</th>
+          <th>country</th>
+          <th>movement</th>
+          <th>movement model</th>
+          <th>to repair</th>
+          <th>deadline</th>
+          <th>cost</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let watch of watches" class="row-watch" (click)="goToWatchDetails(watch)">
+          <td>{{watch?.company}}</td>
+          <td appImportant>{{watch?.model}}</td>
+          <td>{{watch?.country}}</td>
+          <td>{{watch?.movement}}</td>
+          <td>{{watch?.movementModel}}</td>
+          <td>{{watch?.toRepair}}</td>
+          <td>{{watch?.deadline | date:'shortDate'}}</td>
+          <td appImportant>{{watch?.cost | zloty}}</td>
+          <td  (click)="removeWatch(watch, $event)"><button class="btn btn-danger">&times;</button> </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noWatchesInfo>
+        <div class="no-watches-info">
+          <p>Currently no watches in service</p>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="total-cost">
+        <p class="text-right">total cost: {{totalCost}} PLN</p>
+      </div>
+    </div>
+  </div>
+</div>

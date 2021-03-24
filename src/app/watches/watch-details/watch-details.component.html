@@ -1,0 +1,76 @@
+<app-header>
+  <p levels>{{watch.company}} {{watch.model}}</p>
+  <div content>
+    <p>Watch details</p>
+  </div>
+</app-header>
+
+<div class="container">
+  <div class="data-container">
+    <form [formGroup]="watchUpdateForm">
+      <div class="row form-group">
+        <div class="col-sm-4">
+          <label for="company">Company</label>
+          <input formControlName="company" type="text" id="company" class="form-control" placeholder="company">
+          <p *ngIf="!watchUpdateForm.get('company').valid && watchUpdateForm.get('company').dirty" class="error">
+            This field is required!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <label for="country">Country</label>
+          <input formControlName="country" type="text" id="country" class="form-control" placeholder="country">
+        </div>
+        <div class="col-sm-4">
+          <label for="model">Model</label>
+          <input formControlName="model" type="text" id="model" class="form-control" placeholder="model">
+          <p *ngIf="!watchUpdateForm.get('model').valid && watchUpdateForm.get('model').dirty" class="error">
+            This field is required!
+          </p>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-4">
+          <label for="movement">Movement</label>
+          <input formControlName="movement" type="text" id="movement" class="form-control" placeholder="movement">
+        </div>
+        <div class="col-sm-4">
+          <label for="movementModel">Movement model</label>
+          <input formControlName="movementModel" type="text" id="movementModel" class="form-control" placeholder="movement model">
+        </div>
+        <div class="col-sm-4">
+          <label for="toRepair">To repair</label>
+          <input formControlName="toRepair" type="text" id="toRepair" class="form-control" placeholder="to repair">
+          <p *ngIf="!watchUpdateForm.get('toRepair').valid && watchUpdateForm.get('toRepair').dirty" class="error">
+            This field is required!
+          </p>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-6">
+          <label for="deadline">Deadline</label>
+          <input formControlName="deadline" type="text" id="deadline" class="form-control" placeholder="deadline">
+        </div>
+        <div class="col-sm-6">
+          <label for="cost">Cost</label>
+          <input formControlName="cost" type="number" id="cost" class="form-control" placeholder="cost">
+          <p *ngIf="!watchUpdateForm.get('cost').valid && watchUpdateForm.get('cost').dirty" class="error">
+            This field is required!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <button [disabled]="watchUpdateForm.invalid" (click)="updateWatch()" type="submit" class="btn btn-primary float-right">
+            Update watch
+          </button>
+          <button (click)="watchUpdateForm.reset()" class="btn btn-secondary float-right">Reset</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

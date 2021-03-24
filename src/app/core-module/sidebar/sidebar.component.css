@@ -1,0 +1,49 @@
+@import '../../../assets/styles/variables.css';
+
+.sidebar{
+  width: 180px;
+  background-color: var(--blue);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.logo{
+  /*margin: auto;*/
+  margin-bottom: 30px;
+  width: 180px;
+  height: 122px;
+  display: block;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+li{
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+li:hover{
+  background-color: #10447d;
+  transition: linear 300ms;
+}
+li.active{
+  background-color: var(--cyan);
+}
+
+.footer{
+  width: 180px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.author{
+  color: darkgrey;
+  text-decoration: none;
+  font-size: 11px;
+}
+

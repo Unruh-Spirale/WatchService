@@ -1,0 +1,21 @@
+@import "../../../assets/styles/variables.css";
+
+.no-watches-info, .total-cost{
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--blue);
+  padding: 20px;
+  background-color: white;
+}
+
+table{
+  background-color: white;
+  color: var(--blue);
+}
+
+.row-watch{
+  cursor: pointer;
+}
+

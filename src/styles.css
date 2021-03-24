@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "assets/styles/variables.css";
+
+:root{
+  --backgroundblue: #518bbf;
+  --red: #ff4332;
+  --cyan: #295089;
+  --green: #45ff39;
+  --lightblue: #446ef2;
+  --blue: #1a3162;
+}
+
+
+body{
+  background-color: var(--backgroundblue);
+}
+
+.data-header{
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 15px;
+}
+.data-container{
+  padding: 15px;
+  background-color: white;
+  margin: 15px;
+}
+
+.error{
+  background-color: var(--red);
+  color: white;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
