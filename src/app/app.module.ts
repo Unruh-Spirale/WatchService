@@ -11,6 +11,11 @@ import {RouterModule} from '@angular/router';
 import {WatchesListComponent} from './watches/watches-list/watches-list.component';
 import {AppRoutingModule} from './app-routing.module';
 import {WatchesRoutingModule} from './watches/watches-routing.module';
+import {LoginRoutingModule} from './login/login-routing.module';
+import {LoginModule} from './login/login.module';
+import {AuthService} from './auth/auth.service';
+import {AuthGuard} from './auth/auth.guard';
+import {LayoutService} from './shared-module/services/layout.service';
 
 
 @NgModule({
@@ -22,11 +27,13 @@ import {WatchesRoutingModule} from './watches/watches-routing.module';
     FormsModule,
     HttpClientModule,
     WatchesModule,
+    LoginModule,
     CoreModuleModule,
     AppRoutingModule,
-    WatchesRoutingModule
+    WatchesRoutingModule,
+    LoginRoutingModule
   ],
-  providers: [ WatchesService],
+  providers: [ WatchesService, AuthService, AuthGuard, LayoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

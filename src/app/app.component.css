@@ -1,8 +1,12 @@
 @import '../assets/styles/variables.css';
 
-#content-wrapper{
+.content-wrapper{
   background-color: var(--backgroundblue);
   margin: 0 0 0 180px;
   min-height: 100%;
   padding: 0;
+}
+
+.content-wrapper-login-view{
+  margin: 0;
 }

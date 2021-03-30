@@ -1,4 +1,4 @@
-<app-sidebar></app-sidebar>
-<div id="content-wrapper">
+<app-sidebar *ngIf="idSidebarVisible"></app-sidebar>
+<div class="content-wrapper" [ngClass]="{ 'content-wrapper-login-view': !idSidebarVisible}">
   <router-outlet></router-outlet>
 </div>

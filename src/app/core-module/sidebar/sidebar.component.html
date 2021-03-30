@@ -4,6 +4,7 @@
     <ul>
       <li [routerLink]="['/watches']" [routerLinkActive]="'active'" >Watches</li>
       <li [routerLink]="['/new-watch']" [routerLinkActive]="'active'">Add watch</li>
+      <li (click)="logOut()">Logout</li>
     </ul>
   </nav>
   <div class="footer">
