@@ -12,7 +12,7 @@ This application uses Angular-serwer like a server with datas connected to mySql
 ## General info
 
 In this application user can manage orders of watches repairs. All operation on database are done in Angular-serwer using java. In this project I used Angular's Validators to valid 
-datas from add new order form and update order form. Also I simulate a authentication layer to secure application.
+datas from add new order form and update order form. Also I simulated a authentication layer to secure application.
 
 ## Technologies
 
