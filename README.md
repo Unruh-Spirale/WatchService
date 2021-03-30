@@ -35,8 +35,8 @@ Spring Boot. When Angular-serwer run, start this application and go to localhost
 
 Below there are some pictures to demonstrate this application. 
 
-![Homepage](./screens/img7.png)
 ![Login](./screens/img6.png)
+![Homepage](./screens/img7.png)
 ![Update](./screens/img2.png)
 ![Add](./screens/img4.png)
 ![Validation](./screens/img5.png)
